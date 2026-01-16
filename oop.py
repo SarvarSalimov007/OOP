@@ -137,30 +137,30 @@
 ##################################################
 ##################################################
 ##################################################
-##5-masala
-class Sportchilar:
-      def __init__(self,nomi,yoshi,sport_turi):
-            self.nomi = nomi
-            self.yoshi = yoshi
-            self.sport_turi = sport_turi
-ali = Sportchilar(f"Ali",25,"Futbol")
-vali = Sportchilar(f"Vali",22,"Basketbol")
-hasan = Sportchilar(f"Hasan",28,"Tennis")
-husan = Sportchilar(f"Husan",20,"Suzish")
-olim = Sportchilar(f"Olim",24,"Voleybol")
-eng_yosh_sportchi = Sportchilar(f"Husan",20,"Suzish")
-print('='*30)
-print(f'='*4,"SPORTCHILAR RO'YXATI",'='*5)
-print('='*30)
-print(f"Sportchi ma'lumotlari:\nNomi: {ali.nomi}\nYoshi: {ali.yoshi}\nSport turi: {ali.sport_turi}")
-print("="*30)
-print(f"Sportchi ma'lumotlari:\nNomi: {vali.nomi}\nYoshi: {vali.yoshi}\nSport turi: {vali.sport_turi}")
-print("="*30)
-print(f"Sportchi ma'lumotlari:\nNomi: {hasan.nomi}\nYoshi: {hasan.yoshi}\nSport turi: {hasan.sport_turi}")
-print("="*30)
-print(f"Sportchi ma'lumotlari:\nNomi: {husan.nomi}\nYoshi: {husan.yoshi}\nSport turi: {husan.sport_turi}")
-print("="*30)
-print(f"Sportchi ma'lumotlari:\nNomi: {olim.nomi}\nYoshi: {olim.yoshi}\nSport turi: {olim.sport_turi}")
-print("="*30)
-print("="*6,"Eng yosh sportchi","="*5,f"\nNomi: {eng_yosh_sportchi.nomi}\nYoshi: {eng_yosh_sportchi.yoshi}\nSport turi: {eng_yosh_sportchi.sport_turi}")
-print("="*30)
+# ##5-masala
+# class Sportchilar:
+#       def __init__(self,nomi,yoshi,sport_turi):
+#             self.nomi = nomi
+#             self.yoshi = yoshi
+#             self.sport_turi = sport_turi
+# ali = Sportchilar(f"Ali",25,"Futbol")
+# vali = Sportchilar(f"Vali",22,"Basketbol")
+# hasan = Sportchilar(f"Hasan",28,"Tennis")
+# husan = Sportchilar(f"Husan",20,"Suzish")
+# olim = Sportchilar(f"Olim",24,"Voleybol")
+# eng_yosh_sportchi = Sportchilar(f"Husan",20,"Suzish")
+# print('='*30)
+# print(f'='*4,"SPORTCHILAR RO'YXATI",'='*5)
+# print('='*30)
+# print(f"Sportchi ma'lumotlari:\nNomi: {ali.nomi}\nYoshi: {ali.yoshi}\nSport turi: {ali.sport_turi}")
+# print("="*30)
+# print(f"Sportchi ma'lumotlari:\nNomi: {vali.nomi}\nYoshi: {vali.yoshi}\nSport turi: {vali.sport_turi}")
+# print("="*30)
+# print(f"Sportchi ma'lumotlari:\nNomi: {hasan.nomi}\nYoshi: {hasan.yoshi}\nSport turi: {hasan.sport_turi}")
+# print("="*30)
+# print(f"Sportchi ma'lumotlari:\nNomi: {husan.nomi}\nYoshi: {husan.yoshi}\nSport turi: {husan.sport_turi}")
+# print("="*30)
+# print(f"Sportchi ma'lumotlari:\nNomi: {olim.nomi}\nYoshi: {olim.yoshi}\nSport turi: {olim.sport_turi}")
+# print("="*30)
+# print("="*6,"Eng yosh sportchi","="*5,f"\nNomi: {eng_yosh_sportchi.nomi}\nYoshi: {eng_yosh_sportchi.yoshi}\nSport turi: {eng_yosh_sportchi.sport_turi}")
+# print("="*30)
