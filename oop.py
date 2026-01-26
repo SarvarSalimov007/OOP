@@ -112,11 +112,8 @@
 ##################################################
 ##################################################
 ##################################################
-<<<<<<< HEAD
-##5-masala
-=======
 # ##5-masala
->>>>>>> 7c3eb6242b21fed671433f630bdf0c6452efde9a
+
 # class Sportchilar:
 #       def __init__(self,nomi,yoshi,sport_turi):
 #             self.nomi = nomi
@@ -143,7 +140,6 @@
 # print("="*30)
 # print("="*6,"Eng yosh sportchi","="*5,f"\nNomi: {eng_yosh_sportchi.nomi}\nYoshi: {eng_yosh_sportchi.yoshi}\nSport turi: {eng_yosh_sportchi.sport_turi}")
 # print("="*30)
-<<<<<<< HEAD
 ##################################################
 ##################################################
 ##################################################
@@ -468,7 +464,204 @@
 ##################################################
 ##################################################
 ##################################################
-##16-masala
+##1-masala
+# class CartItem:
+#     def __init__(self, name, price, quantity, discount):
+#         self.name = name
+#         self.price = price
+#         self.quantity = quantity
+#         self.discount = discount
+
+#     def total_cost(self):
+#         return self.price * self.quantity * (1 - self.discount / 100)
+
+# class FoodItem(CartItem):
+#     def total_cost(self):
+#         cost = super().total_cost()
+#         return f"Oziq-ovqat mahsuloti: {self.name} -> {cost:.2}$"
+
+# class NonFoodItem(CartItem):
+#     def total_cost(self):
+#         cost = super().total_cost()
+        
+#         return f"Nooziq-ovqat mahsuloti: {self.name} -> {cost:.2}$"
+
+# items = [
+#     FoodItem("Olma", 1.5, 3, 10),
+#     FoodItem("Non", 2.0, 2, 5)
+# ]
+# total_sum = 0
+# for item in items:
+#     print(item.total_cost())
+#     total_sum += item.price * item.quantity * (1 - item.discount / 100)
+# print("Umumiy summa:", round(total_sum, 2), "$")
+##2-masala
+# class Vehicle:
+#     def __init__(self, name, distance, fuel_efficiency, fuel_price):
+#         self.name = name
+#         self.distance = distance
+#         self.fuel_efficiency = fuel_efficiency
+#         self.fuel_price = fuel_price
+#
+#     def trip_cost(self):
+#         return self.distance * self.fuel_efficiency * self.fuel_price
+#
+# class Car(Vehicle):
+#     def trip_cost(self):
+#         cost = super().trip_cost()
+#         return f"Avtomobil ({self.name}) xarajatlari: {cost}$"
+#
+# class Motorcycle(Vehicle):
+#     def trip_cost(self):
+#         cost = super().trip_cost()
+#         return f"Motosikl ({self.name}) xarajatlari: {cost}$"
+#
+# vehicles = [Car("Avto", 100, 0.1, 1.5), Motorcycle("Motosikl", 50, 0.05, 1.5)]
+# for vehicle in vehicles:
+#     print(vehicle.trip_cost())
+
+##3-masala
+# class Pet:
+#     def __init__(self, name, daily_food):
+#         self.name = name
+#         self.daily_food = daily_food
+#
+#     def feeding_plan(self):
+#         return f"{self.name} uchun kunlik ovqat miqdori: {self.daily_food} gramm"
+#
+# class Dog(Pet):
+#     pass
+#
+# class Cat(Pet):
+#     pass
+#
+# pets = [Dog("It", 500), Cat("Mushuk", 200)]
+# for pet in pets:
+#     print(pet.feeding_plan())
+
+##4-masala
+# class Order:
+#     def __init__(self, name, price, service_fee):
+#         self.name = name
+#         self.price = price
+#         self.service_fee = service_fee
+#
+#     def total_cost(self):
+#         return self.price * (1 + self.service_fee / 100)
+#
+# class MainDish(Order):
+#     def total_cost(self):
+#         cost = super().total_cost()
+#         return f"Asosiy taom: {self.name} -> {cost:.2f}$"
+#
+# class SideDish(Order):
+#     def total_cost(self):
+#         cost = super().total_cost()
+#         return f"Qo'shimcha taom: {self.name} -> {cost:.2f}$"
+#
+# orders = [MainDish("Pizza", 15, 10), SideDish("Salat", 5, 10)]
+# total_sum = 0
+# for order in orders:
+#     print(order.total_cost())
+#     total_sum += order.price * (1 + order.service_fee / 100)
+# print("Umumiy narx:", round(total_sum, 2), "$")
+
+##5-masala
+# class Student:
+#     def __init__(self, name, grades):
+#         self.name = name
+#         self.grades = grades
+#
+#     def average_grade(self):
+#         return sum(self.grades) / len(self.grades)
+#
+# class HighSchoolStudent(Student):
+#     def average_grade(self):
+#         avg = super().average_grade()
+#         return f"Maktab o'quvchisi {self.name} o'rtacha bahosi: {avg:.2f}"
+#
+# class CollegeStudent(Student):
+#     def average_grade(self):
+#         avg = super().average_grade()
+#         return f"Kollej talabasi {self.name} o'rtacha bahosi: {avg:.2f}"
+#
+# students = [HighSchoolStudent("Ali", [5, 4, 5]), CollegeStudent("Vali", [3, 4, 5])]
+# for student in students:
+#     print(student.average_grade())
+
+##6-masala
+# class BookRental:
+#     def __init__(self, title, due_date):
+#         self.title = title
+#         self.due_date = due_date
+#
+#     def is_overdue(self, current_date):
+#         return self.due_date < current_date
+#
+# class FictionBook(BookRental):
+#     def is_overdue(self, current_date):
+#         overdue = super().is_overdue(current_date)
+#         status = "Kechikkan" if overdue else "O'z vaqtida"
+#         return f"Badiiy kitob: {self.title} -> {status}"
+#
+# class NonFictionBook(BookRental):
+#     def is_overdue(self, current_date):
+#         overdue = super().is_overdue(current_date)
+#         status = "Kechikkan" if overdue else "O'z vaqtida"
+#         return f"Ilmiy kitob: {self.title} -> {status}"
+#
+# rentals = [FictionBook("Python", "2025-01-01"), NonFictionBook("AI", "2025-02-01")]
+# current_date = "2025-01-15"
+# for rental in rentals:
+#     print(rental.is_overdue(current_date))
+
+##7-masala
+# class Utility:
+#     def __init__(self, type, amount, rate):
+#         self.type = type
+#         self.amount = amount
+#         self.rate = rate
+#
+#     def calculate_cost(self):
+#         return self.amount * self.rate
+#
+# class Electricity(Utility):
+#     def calculate_cost(self):
+#         cost = super().calculate_cost()
+#         return f"Elektr xarajatlari ({self.amount} kVt/soat): {cost:.2f}$"
+#
+# class Water(Utility):
+#     def calculate_cost(self):
+#         cost = super().calculate_cost()
+#         return f"Suv xarajatlari ({self.amount} litr): {cost:.2f}$"
+#
+# utilities = [Electricity("Elektr", 100, 0.2), Water("Suv", 5000, 0.01)]
+# for u in utilities:
+#     print(u.calculate_cost())
+
+##8-masala
+# class Exercise:
+#     def __init__(self, name, duration, calories_per_min):
+#         self.name = name
+#         self.duration = duration
+#         self.calories_per_min = calories_per_min
+#
+#     def total_calories(self):
+#         return self.duration * self.calories_per_min
+#
+# class Running(Exercise):
+#     def total_calories(self):
+#         calories = super().total_calories()
+#         return f"Yugurish: {self.name} -> {calories} kcal"
+#
+# class Cycling(Exercise):
+#     def total_calories(self):
+#         calories = super().total_calories()
+#         return f"Velosiped: {self.name} -> {calories} kcal"
+#
+# exercises = [Running("Yugurish", 30, 10), Cycling("Velosiped", 20, 8)]
+# for ex in exercises:
+#     print(ex.total_calories())
 
 
 
@@ -491,7 +684,3 @@
 
 
 
-
-
-=======
->>>>>>> 7c3eb6242b21fed671433f630bdf0c6452efde9a
