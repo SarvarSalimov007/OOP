@@ -621,23 +621,23 @@
 #         self.type = type
 #         self.amount = amount
 #         self.rate = rate
-#
+
 #     def calculate_cost(self):
 #         return self.amount * self.rate
-#
-# class Electricity(Utility):
+
+# class Elektor(Utility):
 #     def calculate_cost(self):
 #         cost = super().calculate_cost()
-#         return f"Elektr xarajatlari ({self.amount} kVt/soat): {cost:.2f}$"
-#
-# class Water(Utility):
+#         return f"Elektr xarajatlari ({self.amount} kVt/soat): {cost:.2}$"
+
+# class Suv(Utility):
 #     def calculate_cost(self):
 #         cost = super().calculate_cost()
-#         return f"Suv xarajatlari ({self.amount} litr): {cost:.2f}$"
-#
-# utilities = [Electricity("Elektr", 100, 0.2), Water("Suv", 5000, 0.01)]
-# for u in utilities:
-#     print(u.calculate_cost())
+#         return f"Suv xarajatlari ({self.amount} litr): {cost:.2}$"
+
+# utilities = [Elektor("Elektr", 100, 0.2), Suv("Suv", 5000, 0.01)]
+# for i in utilities:
+#     print(i.calculate_cost())
 
 ##8-masala
 # class Exercise:
@@ -645,31 +645,112 @@
 #         self.name = name
 #         self.duration = duration
 #         self.calories_per_min = calories_per_min
-#
+
 #     def total_calories(self):
 #         return self.duration * self.calories_per_min
-#
+
 # class Running(Exercise):
 #     def total_calories(self):
 #         calories = super().total_calories()
-#         return f"Yugurish: {self.name} -> {calories} kcal"
-#
+#         return f"Mashq! Vazifa: {self.name} -> {calories} kcal"
+
 # class Cycling(Exercise):
 #     def total_calories(self):
 #         calories = super().total_calories()
-#         return f"Velosiped: {self.name} -> {calories} kcal"
-#
+#         return f"Mashq! Vazifa: {self.name} -> {calories} kcal"
+
 # exercises = [Running("Yugurish", 30, 10), Cycling("Velosiped", 20, 8)]
-# for ex in exercises:
-#     print(ex.total_calories())
+# for i in exercises:
+#     print(i.total_calories())
+
+##9-masala
+# class Expense:
+#     def __init__(self, category, amount):
+#         self.category = category
+#         self.amount = amount
+
+#     def get_cost(self):
+#         return self.amount
+
+# class TransportExpense(Expense):
+#     def get_cost(self):
+#         cost = super().get_cost()
+#         return f"Transport xarajati: {cost:.2f}$"
+
+# class AccommodationExpense(Expense):
+#     def get_cost(self):
+#         cost = super().get_cost()
+#         return f"Yashash xarajati: {cost:.2f}$"
+
+# expenses = [
+#     TransportExpense("Transport", 200),
+#     AccommodationExpense("Yashash", 300)
+# ]
+
+# for expense in expenses:
+#     print(expense.get_cost())
+
+##10-masala
+# class Phoneplan:
+#     def __init__(self, name, minutes, sms, minute_rate, sms_rate):
+#         self.name = name
+#         self.minutes = minutes
+#         self.sms = sms
+#         self.minute_rate = minute_rate
+#         self.sms_rate = sms_rate
+
+#     def total_cost(self):
+#         return self.minutes * self.minute_rate + self.sms * self.sms_rate
+
+# class StandartPlan(Phoneplan):
+#     def total_cost(self):
+#         cost = super().total_cost()
+#         return f"Standart reja: {self.name} -> {cost:.2f}$"
+
+# class PremiumPlan(Phoneplan):
+#     def total_cost(self):
+#         cost = super().total_cost()
+#         return f"Premium reja: {self.name} -> {cost:.2f}$"
+
+# plans = [
+#     StandartPlan("Standart", 100, 50, 0.1, 0.05),
+#     PremiumPlan("Premium", 200, 100, 0.8, 0.04)
+# ]
+# for plan in plans:
+#     print(plan.total_cost())
+
+## 11-masala
+# class Plant:
+#     def __init__(self, name, water_needed):
+#         self.name = name
+#         self.water_needed = water_needed
+
+#     def watering_plan(self):
+#         return self.water_needed
+
+# class Flower(Plant):
+#     def watering_plan(self):
+#         amount = super().watering_plan()
+#         return f"{self.name} uchun suv miqdori: {amount} litr"
+
+# class Tree(Plant):
+#     def watering_plan(self):
+#         amount = super().watering_plan()
+#         return f"{self.name} uchun suv miqdori: {amount} litr"
+
+# plants = [
+#     Flower("Gul", 2),
+#     Tree("Daraxt", 5)
+# ]
+
+# for plant in plants:
+#     print(plant.watering_plan())
 
 
 
 
 
-
-
-
+    
 
 
 
