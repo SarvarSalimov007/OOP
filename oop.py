@@ -745,14 +745,69 @@
 
 # for plant in plants:
 #     print(plant.watering_plan())
+#################################################
+#################################################
+#################################################
+# class Shaxs:
+#     def __init__(self,ism):
+#         self.ism = ism
+# class Talaba(Shaxs):
+#     def __init__(self,ism,id_raqam):
+#         super().__init__(ism)
+#         self.id_raqam = id_raqam
+# class ImtihonNatijasi(Talaba):
+#     def __init__(self,ism,id_raqam,baholar):
+#         super().__init__(ism,id_raqam)
+#         self.baholar = baholar
+#     def ortlama(self):
+#         if not self.baholar:
+#             return 0.0
+#         return sum(self.baholar / len(self.baholar))
+#     def status(self):
+#         o = self.ortlama()
+#         if o >= 86:
+#             return "A'lo!"
+#         elif 71 <= o <= 85:
+#             return "Yaxshi"
+#         elif 56 <= o <= 70:
+#             return"Qoniqarli"
+#         return "Qoniqarsiz"
+# natija = ImtihonNatijasi("Doniyor","U001",[88])
+# print(natija.ism)
+# print(natija.id_raqam)
+# print(natija.ortlama())
+# print(natija,status())
+##########################################
+##########################################
+##########################################
+from abc import ABC,abstractmethod
+from typing import List
 
-
-
-
-
-    
-
-
+class JamoAzo(ABC):
+    def __init__(self, ism):
+        self.ism = ism
+    @abstractmethod
+    def vazifa(self):
+        return NotImplementedError
+class BackendDasturchi(JamoAzo):
+    def vazifa(self):
+        return "API va Ma'lumotar Bazasi Bilan Ishlaydi!"
+class FrontedDasturchi(JamoAzo):
+    def vazifa(self):
+        return "UI va Foydalanuvchi interfeysini yaratadi!"
+class Tester(JamoAzo):
+    def vazifa(self):
+        return "Tizimni test qiladi!"
+def hisobot(azolar: List[JamoAzo]):
+    for azo in azolar:
+        print(f"Ism: {azo.ism}\nVazifa: {azo.vazifa}")
+jamoa = [
+    BackendDasturchi("Marjona"),
+    FrontedDasturchi("Rayhona"),
+    Tester("Maftuna")
+]
+hisobot(jamoa)
+print(hisobot(jamoa))
 
 
 
