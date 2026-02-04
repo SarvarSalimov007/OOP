@@ -745,9 +745,137 @@
 
 # for plant in plants:
 #     print(plant.watering_plan())
-#################################################
-#################################################
-#################################################
+##########################################
+##########################################
+##########################################
+##1-masala
+# class Transport:
+#     def __init__(self, model: str, yil: int) -> None:
+#         self.model = model
+#         self.yil = yil
+#
+#     def malumot(self) -> str:
+#         return f"Model: {self.model}, Yil: {self.yil}"
+#
+#
+# class Avtomobil(Transport):
+#     def __init__(self, model: str, yil: int, yonilgi_turi: str) -> None:
+#         super().__init__(model, yil)
+#         self.yonilgi_turi = yonilgi_turi
+#
+#     def malumot(self) -> str:
+#         baza = super().malumot()
+#         return f"{baza}, Yonilg'i: {self.yonilgi_turi}"
+#
+#
+# class Avtobus(Transport):
+#     def __init__(self, model: str, yil: int, orinlar_soni: int) -> None:
+#         super().__init__(model, yil)
+#         self.orinlar_soni = orinlar_soni
+#
+#     def malumot(self) -> str:
+#         baza = super().malumot()
+#         return f"{baza}, O'rinlar: {self.orinlar_soni}"
+#
+# a = Avtomobil("Cobalt", 2022, "benzin")
+# print(a.malumot())
+# b = Avtobus("Isuzu", 2018, 40)
+# print(b.malumot())
+##########################################
+##########################################
+##########################################
+##2-masala
+# class Kitob:
+#     def __init__(self, nom, mualif, yil) -> None:
+#         self.nom = nom
+#         self.yil = yil
+#         self.mualif = mualif
+#
+#     def taqdimot(self) -> str:
+#         return f"tadimot"
+# class Elektronkitonlar(Kitob):
+#     def __init__(self,nom, muallif, yil) -> None:
+#         super().__init__(nom, muallif, yil)
+#     def taqdimot(self) -> str:
+#         return f"taqdimot"
+# class Audikitob(Kitob):
+#     def __init__(self,nom, mualif, yil) -> None:
+#         super().__init__(nom, mualif, yil)
+#
+# e = Elektronkitonlar("Python asoslari", "Ali", 2023, 5)
+# a = Audikitob("O'tkan kunlar", "Abdulla Qodiriy", 2020, 12)
+#
+# print(e.taqdimot())
+# print(a.taqdimot())
+##########################################
+##########################################
+##########################################
+##3-masala
+# class Xodim:
+#     def __init__(self, ism, asosiy_maosh):
+#         self.ism = ism
+#         self.asosiy_maosh = asosiy_maosh
+
+#     def oylik(self):
+#         return self.asosiy_maosh
+
+#     def malumot(self):
+#         return f"Ism: {self.ism}, Oylik: {self.oylik()}"
+
+# class Oqsoch(Xodim):
+#     def __init__(self, ism, asosiy_maosh, bonus_foiz):
+#         super().__init__(ism, asosiy_maosh)
+#         self.bonus_foiz = bonus_foiz
+
+#     def oylik(self):
+#         return self.asosiy_maosh * (1 + self.bonus_foiz / 100)
+
+# class SoatbayXodim(Xodim):
+#     def __init__(self, ism, soat, soatlik_stavka):
+#         super().__init__(ism, soat * soatlik_stavka)
+#         self.soat = soat
+#         self.soatlik_stavka = soatlik_stavka
+# o = Oqsoch("Dilshod", 5_000_000, 20)
+# s = SoatbayXodim("Aziza", soat=160, soatlik_stavka=50_000)
+
+# print(o.malumot())
+# print(s.malumot())
+##########################################
+##########################################
+##########################################
+##4-masala
+# class Mahsulot:
+#     def __init__(self,nom,narx):
+#         self.nom = nom
+#         self.narx = narx
+
+#     def chegirmali_narx(self,foiz):
+#         return self.narx / foiz
+
+# class Elektronika(Mahsulot):
+#     def __init__(self,nom,narx,kafolat_oy):
+#         super().__init__(nom,narx)
+#         self.kafolat_oy = kafolat_oy
+
+#     def malumot(self):
+#         return f"Nom: {self.nom}\nNarx: {self.narx}\nKafolat: {self.kafolat_oy}oy"
+# class OziqOvqat(Mahsulot):
+
+#     def __init__(self,nom,narx,yaroqlilik_muddati):
+#         super().__init__(nom,narx)
+#         self.yaroqlilik_muddati = yaroqlilik_muddati
+
+#     def malumot1(self):
+#         return f"Nom: {self.nom}\nNarx: {self.narx}\nYaroqlilik muddati: {self.yaroqlilik_muddati}hafta"
+    
+# Elektronika = Elektronika("Muzlatkich","6000000","6")
+# OziqOvqat = OziqOvqat("Non","5000","1hafta")
+# print(Elektronika.malumot())
+# print(OziqOvqat.malumot1())
+##########################################
+##########################################
+##########################################
+##5-masala
 # class Shaxs:
 #     def __init__(self,ism):
 #         self.ism = ism
@@ -759,55 +887,157 @@
 #     def __init__(self,ism,id_raqam,baholar):
 #         super().__init__(ism,id_raqam)
 #         self.baholar = baholar
-#     def ortlama(self):
-#         if not self.baholar:
-#             return 0.0
-#         return sum(self.baholar / len(self.baholar))
+#     def ortalama(self):
+#         return sum(self.baholar)/len(self.baholar)
 #     def status(self):
-#         o = self.ortlama()
-#         if o >= 86:
-#             return "A'lo!"
-#         elif 71 <= o <= 85:
+#         if self.ortalama() >= 86:
+#             return "A'lo"
+#         elif 71 <= self.ortalama() <= 85:
 #             return "Yaxshi"
-#         elif 56 <= o <= 70:
-#             return"Qoniqarli"
-#         return "Qoniqarsiz"
-# natija = ImtihonNatijasi("Doniyor","U001",[88])
-# print(natija.ism)
-# print(natija.id_raqam)
-# print(natija.ortlama())
-# print(natija,status())
+#         elif 61 <= self.ortalama() <= 70:
+#             return "Qoniqarli"
+#         else:
+#             return "Qoniqarsiz"
+# natija = ImtihonNatijasi("Ali", "T001", [90, 80, 100])
+# print(natija.ism)          
+# print(natija.id_raqam)     
+# print(natija.ortalama())   
+# print(natija.status())     
 ##########################################
 ##########################################
 ##########################################
-from abc import ABC,abstractmethod
-from typing import List
+##6-masala
+# class Hisob:
+#     def __init__(self, raqam, egasi, balans):
+#         self.raqam = raqam
+#         self.egasi = egasi
+#         self.balans = balans
+#     def kirim(self, summa):
+#         self.balans += summa
+#         return f"Kirim: {summa}, Yangi balans: {self.balans}"
+#     def chiqim(self, summa):
+#         if self.balans >= summa:
+#             self.balans -= summa
+#             return f"Chiqim: {summa}, Yangi balans: {self.balans}"
+#         else:
+#             return "Balans yetarli emas"
+# class JamgArmaMixin:
+#     def __init__(self, foiz_stavka, **kwargs):
+#         super().__init__(**kwargs)
+#         self.foiz_stavka = foiz_stavka
+#     def foiz_qosh(self):
+#         self.balans += self.balans * (self.foiz_stavka / 100)
+#         return f"Foiz qo'shildi: {self.balans}"
+# class KreditMixin:
+#     def __init__(self, limit, **kwargs):
+#         super().__init__(**kwargs)
+#         self.limit = limit
+#     def chiqim(self, summa):
+#         if self.balans + self.limit >= summa:
+#             self.balans -= summa
+#             return f"Chiqim: {summa}, Yangi balans: {self.balans}"
+#         else:
+#             return "Limitdan oshib ketdi"
+# class VIPHisob(KreditMixin, JamgArmaMixin, Hisob):
+#     def __init__(self, raqam, egasi, balans, foiz_stavka, limit):
+#         super().__init__(raqam=raqam, egasi=egasi, balans=balans, foiz_stavka=foiz_stavka, limit=limit)
+# vip = VIPHisob("001", "Karim", 2_000_000, foiz_stavka=12, limit=500_000)
+# print(vip.foiz_qosh())
+# print(vip.balans)
+# print(vip.chiqim(2_400_000))   # limit hisobga olinadi
+# print(vip.balans)
+##########################################
+##########################################
+##########################################
+##7-masala
+#     def __init__(self, nom, davomiylik_hafta, narx):
+#         self.nom = nom
+#         self.davomiylik_hafta = davomiylik_hafta
+#         self.narx = narx
+#     def malumot(self):
+#         return f"Kurs: {self.nom}, Davomiylik: {self.davomiylik_hafta} hafta, Narx: {self.narx}"
+# class OnlaynKurs(Kurs):
+#     def __init__(self, nom, davomiylik_hafta, narx, platforma):
+#         super().__init__(nom, davomiylik_hafta, narx)
+#         self.platforma = platforma
+#     def malumot(self):
+#         return f"{super().malumot()}, Platforma: {self.platforma}"
+# class OfflineKurs(Kurs):
+#     def __init__(self, nom, davomiylik_hafta, narx, manzil):
+#         super().__init__(nom, davomiylik_hafta, narx)
+#         self.manzil = manzil
+#     def malumot(self):
+#         return f"{super().malumot()}, Manzil: {self.manzil}"
+# kurslar = [
+#     OnlaynKurs("Python", 8, 100, "Coursera"),
+#     OfflineKurs("Java", 10, 120, "Tashkent")
+# ]
+# for kurs in kurslar:
+#     print(kurs.malumot())
+##########################################
+##########################################
+##########################################
+##8-masala
+# class Taom:
+#     def __init__(self, nom, narx):
+#         self.nom = nom
+#         self.narx = narx
+#     def tavsif(self):
+#         return f"Taom: {self.nom}, Narx: {self.narx}$
+# class IssiqTaom(Taom):
+#     def __init__(self, nom, narx, kaloriya):
+#         super().__init__(nom, narx)
+#         self.kaloriya = kaloriya
+#     def tavsif(self):
+#         return f"Taom: {self.nom}, Narx: {self.narx}$, Kaloriya: {self.kaloriya}"
+# class Ichimlik(Taom):
+#     def __init__(self, nom, narx, hajm_ml):
+#         super().__init__(nom, narx)
+#         self.hajm_ml = hajm_ml
+#     def tavsif(self):
+#         return f"Taom: {self.nom}, Narx: {self.narx}$, Hajm: {self.hajm_ml} ml"
+# def chegirma_qollash(taomlar, foiz):
+#     for taom in taomlar:
+#         taom.narx -= taom.narx * (foiz / 100)
+# taomlar = [
+#     IssiqTaom("Palov", 10, 500),
+#     Ichimlik("Kofe", 3, 250)
+# ]
+# chegirma_qollash(taomlar, 10)
+# for taom in taomlar:
+#     print(taom.tavsif())
+##########################################
+##########################################
+##########################################
+##9-masala
+# from abc import ABC,abstractmethod
+# from typing import List
 
-class JamoAzo(ABC):
-    def __init__(self, ism):
-        self.ism = ism
-    @abstractmethod
-    def vazifa(self):
-        return NotImplementedError
-class BackendDasturchi(JamoAzo):
-    def vazifa(self):
-        return "API va Ma'lumotar Bazasi Bilan Ishlaydi!"
-class FrontedDasturchi(JamoAzo):
-    def vazifa(self):
-        return "UI va Foydalanuvchi interfeysini yaratadi!"
-class Tester(JamoAzo):
-    def vazifa(self):
-        return "Tizimni test qiladi!"
-def hisobot(azolar: List[JamoAzo]):
-    for azo in azolar:
-        print(f"Ism: {azo.ism}\nVazifa: {azo.vazifa}")
-jamoa = [
-    BackendDasturchi("Marjona"),
-    FrontedDasturchi("Rayhona"),
-    Tester("Maftuna")
-]
-hisobot(jamoa)
-print(hisobot(jamoa))
+# class JamoAzo(ABC):
+#     def __init__(self, ism):
+#         self.ism = ism
+#     @abstractmethod
+#     def vazifa(self):
+#         return NotImplementedError
+# class BackendDasturchi(JamoAzo):
+#     def vazifa(self):
+#         return "API va Ma'lumotar Bazasi Bilan Ishlaydi!"
+# class FrontedDasturchi(JamoAzo):
+#     def vazifa(self):
+#         return "UI va Foydalanuvchi interfeysini yaratadi!"
+# class Tester(JamoAzo):
+#     def vazifa(self):
+#         return "Tizimni test qiladi!"
+# def hisobot(azolar: List[JamoAzo]):
+#     for azo in azolar:
+#         print(f"Ism: {azo.ism}\nVazifa: {azo.vazifa}")
+# jamoa = [
+#     BackendDasturchi("Marjona"),
+#     FrontedDasturchi("Rayhona"),
+#     Tester("Maftuna")
+# ]
+# hisobot(jamoa)
+# print(hisobot(jamoa))
 
 
 
