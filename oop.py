@@ -1038,6 +1038,51 @@
 # ]
 # hisobot(jamoa)
 # print(hisobot(jamoa))
+##########################################
+##########################################
+##########################################
+##10-masala
+# class QadamSanagich:
+#     def __init__(self, kunlik_maqsad, qadamlar):
+#         self.kunlik_maqsad = kunlik_maqsad
+#         self.qadamlar = qadamlar
+
+#     def bajarilgan_kunlar(self):
+#         sanoq = 0
+#         for qadam in self.qadamlar:
+#             if qadam >= self.kunlik_maqsad:
+#                 sanoq += 1
+#         return sanoq
+
+#     def ortalama_qadam(self):
+#         if not self.qadamlar:
+#             return 0
+#         return sum(self.qadamlar) / len(self.qadamlar)
+        
+# class MotivatsionQadamSanagich(QadamSanagich):
+#     def motivatsiya_xabari(self):
+#         # 5 kundan ko'p yoki teng bo'lsa
+#         if self.bajarilgan_kunlar() >= 5:
+#             return "Tabriklaymiz! Siz haftalik maqsadni bajardingiz! 🎉"
+#         else:
+#             return "Hali hammasi oldinda! Davom eting! 💪"
+
+# hafta = [1000, 7500, 8200, 9000, 5000, 12000, 8000]
+# qadam_sanagich = MotivatsionQadamSanagich(5000, hafta)
+
+# print("="*40)
+# print(f"{'QADAM SANAGICH':^40}")
+# print("="*40)
+# print(f"📊 Kunlik maqsad:      {qadam_sanagich.kunlik_maqsad} qadam")
+# print(f"✅ Bajarilgan kunlar:  {qadam_sanagich.bajarilgan_kunlar()} kun")
+# print(f"📈 O'rtacha qadamlar:  {qadam_sanagich.ortalama_qadam():.0f} qadam")
+# print("-" * 40)
+# print(f"💬 Xabar: {qadam_sanagich.motivatsiya_xabari()}")
+# print("="*40)
+
+
+
+
 
 
 
