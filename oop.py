@@ -1089,12 +1089,21 @@
 # print("-" * 40)
 # print(f"💬 Xabar: {qadam_sanagich.motivatsiya_xabari()}")
 # print("="*40)
+##################################################
+##################################################
+##################################################
+##################################################
+##################################################
+##################################################
+##################################################
+class Salomber:
+    def __init__(self,ism,familya):
+        self.ism = ism
+        self.familya = familya
+    def salomlashish(self):
+        return f"Assalomu aleykum {self.ism} {self.familya}"
 
-
-
-
-
-
+print(Salomber("Sarvar","Salimov"))
 
 
 
