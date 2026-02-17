@@ -1118,22 +1118,22 @@
 ##################################################
 ##################################################
 ##################################################
-class Salomlashish:
-    def __init__(self,ism,fam):
-        self.__ism = ism
-        self.__fam = fam
-    def get_ism(self):
-        return self.__ism
-    def get_fam(self):
-        return self.__fam
-    def salomlash(self,):
-        return f"salom {self.__ism} {self.__fam}"
-salom1 = Salomlashish("ali","valiyev")
-salom2 = Salomlashish("vali","aliyev")
-salom3 = Salomlashish("hasan","aliyev")
-print(salom1.get_ism(),salom1.get_fam())
-print(salom2.get_ism(),salom2.get_fam())
-print(salom3.get_ism(),salom3.get_fam())
+# class Salomlashish:
+#     def __init__(self,ism,fam):
+#         self.__ism = ism
+#         self.__fam = fam
+#     def get_ism(self):
+#         return self.__ism
+#     def get_fam(self):
+#         return self.__fam
+#     def salomlash(self,):
+#         return f"salom {self.__ism} {self.__fam}"
+# salom1 = Salomlashish("ali","valiyev")
+# salom2 = Salomlashish("vali","aliyev")
+# salom3 = Salomlashish("hasan","aliyev")
+# print(salom1.get_ism(),salom1.get_fam())
+# print(salom2.get_ism(),salom2.get_fam())
+# print(salom3.get_ism(),salom3.get_fam())
 
 
 
