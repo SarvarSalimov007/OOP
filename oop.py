@@ -1096,18 +1096,44 @@
 ##################################################
 ##################################################
 ##################################################
-class Salomber:
-    def __init__(self,ism,familya):
-        self.ism = ism
-        self.familya = familya
-    def salomlashish(self):
-        return f"Assalomu aleykum {self.ism} {self.familya}"
-
-print(Salomber("Sarvar","Salimov"))
-
-
-
-
+# class Transport:
+#     def __init__(self,rang):
+#         self.rang = rang
+#     def harakatlanmoqda(self):
+#         return f"Harakatlanmoqda"
+# class Mashina(Transport):
+#     def harakatlanmoqda(self):
+#         return f"{self.rang} rangli mashina harakatlanmoqda"
+# class Velosiped(Transport):
+#     def harakatlanmoqda(self):
+#         return f"{self.rang} velosiped pedalsiz ham harakatlanadi!"
+# mashina = Mashina("qora")
+# velosiped = Velosiped("qizil")
+# print(mashina.harakatlanmoqda())
+# print(velosiped.harakatlanmoqda())
+##################################################
+##################################################
+##################################################
+##################################################
+##################################################
+##################################################
+##################################################
+class Salomlashish:
+    def __init__(self,ism,fam):
+        self.__ism = ism
+        self.__fam = fam
+    def get_ism(self):
+        return self.__ism
+    def get_fam(self):
+        return self.__fam
+    def salomlash(self,):
+        return f"salom {self.__ism} {self.__fam}"
+salom1 = Salomlashish("ali","valiyev")
+salom2 = Salomlashish("vali","aliyev")
+salom3 = Salomlashish("hasan","aliyev")
+print(salom1.get_ism(),salom1.get_fam())
+print(salom2.get_ism(),salom2.get_fam())
+print(salom3.get_ism(),salom3.get_fam())
 
 
 
